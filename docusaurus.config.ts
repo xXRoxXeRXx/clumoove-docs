@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Clumoove Nutzerdokumentation',
   tagline: 'Schritt-für-Schritt Anleitungen für Cloud-Migration, Synchronisation & Speicher-Anbieter',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/clumoove_logo.svg',
 
   url: 'https://clumoove.com',
   baseUrl: '/docs/',
