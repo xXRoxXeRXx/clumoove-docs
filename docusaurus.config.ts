@@ -66,15 +66,9 @@ const config: Config = {
       title: 'Clumoove Docs',
       logo: {
         alt: 'Clumoove Logo',
-        src: 'img/logo.svg',
+        src: 'img/clumoove_logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'docsSidebar',
-          position: 'left',
-          label: 'Dokumentation',
-        },
         {
           href: 'https://clumoove.com',
           label: 'Website',
@@ -94,23 +88,6 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Dokumentation',
-          items: [
-            {
-              label: 'Erste Schritte',
-              to: '/',
-            },
-            {
-              label: 'Speicher-Anbieter',
-              to: '/storage-providers',
-            },
-            {
-              label: 'Troubleshooting',
-              to: '/troubleshooting/common-errors',
-            },
-          ],
-        },
         {
           title: 'Projekt',
           items: [

@@ -2,7 +2,6 @@
 id: index
 title: Übersicht & Einführung
 sidebar_position: 1
-slug: /
 ---
 
 # Willkommen zur Clumoove Dokumentation
