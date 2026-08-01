@@ -6,6 +6,16 @@ const config: Config = {
   title: 'Clumoove Nutzerdokumentation',
   tagline: 'Schritt-für-Schritt Anleitungen für Cloud-Migration, Synchronisation & Speicher-Anbieter',
   favicon: 'img/clumoove_logo.svg',
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/docs/img/clumoove_logo.svg',
+      },
+    },
+  ],
 
   url: 'https://clumoove.com',
   baseUrl: '/docs/',
