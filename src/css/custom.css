@@ -11,16 +11,19 @@
   --ifm-font-family-base: 'Open Sans', system-ui, -apple-system, sans-serif;
   --ifm-font-family-monospace: 'Open Sans', monospace;
 
+  --ifm-font-size-base: 0.9375rem;
+  --ifm-line-height-base: 1.65;
+
   /* Heading Proportions matching Website */
-  --ifm-h1-font-size: 2.125rem;
-  --ifm-h2-font-size: 1.5rem;
-  --ifm-h3-font-size: 1.25rem;
-  --ifm-h4-font-size: 1.05rem;
+  --ifm-h1-font-size: 1.75rem;
+  --ifm-h2-font-size: 1.35rem;
+  --ifm-h3-font-size: 1.15rem;
+  --ifm-h4-font-size: 1.00rem;
   --ifm-h5-font-size: 0.875rem;
   --ifm-h6-font-size: 0.8125rem;
   --ifm-heading-line-height: 1.25;
-  --ifm-heading-margin-top: 1.5rem;
-  --ifm-heading-margin-bottom: 0.75rem;
+  --ifm-heading-margin-top: 1.25rem;
+  --ifm-heading-margin-bottom: 0.65rem;
 
   --radius-sm: 0.125rem;
   --radius-md: 0.25rem;
@@ -164,46 +167,78 @@ body {
   font-family: var(--ifm-font-family-base);
   background-color: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
-  font-size: 0.925rem;
-  line-height: 1.6;
+  font-size: 0.9375rem;
+  line-height: 1.65;
 }
 
-/* Content Area Headings Overrides */
+/* Content Area Markdown Text & Colors */
+.markdown p,
+.markdown li,
+.markdown td,
+.markdown th,
+.markdown blockquote {
+  font-family: var(--ifm-font-family-base) !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.65 !important;
+  color: var(--text) !important;
+}
+
+.markdown small,
+.markdown figcaption {
+  color: var(--text-secondary) !important;
+}
+
+/* Content Area Headings Overrides matching Website Proportions */
 h1, h2, h3, h4, h5, h6,
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
-  font-family: var(--ifm-heading-font-family);
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-family: var(--ifm-heading-font-family) !important;
+  font-weight: 700 !important;
 }
 
 .markdown h1, h1.title, header h1, article header h1 {
-  font-size: 2.125rem !important;
+  font-size: 1.75rem !important;
   line-height: 1.25 !important;
-  margin-top: 0.85rem !important;
-  margin-bottom: 0.85rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.75rem !important;
+  letter-spacing: -0.015em !important;
+  color: var(--text) !important;
 }
 
 .markdown h2 {
-  font-size: 1.5rem !important;
+  font-size: 1.35rem !important;
   line-height: 1.3 !important;
-  margin-top: 1.4rem !important;
-  margin-bottom: 0.6rem !important;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.3rem;
+  margin-top: 1.35rem !important;
+  margin-bottom: 0.5rem !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding-bottom: 0.3rem !important;
+  color: var(--text) !important;
 }
 
 .markdown h3 {
-  font-size: 1.25rem !important;
+  font-size: 1.15rem !important;
   line-height: 1.35 !important;
-  margin-top: 1.15rem !important;
-  margin-bottom: 0.45rem !important;
+  margin-top: 1.1rem !important;
+  margin-bottom: 0.4rem !important;
+  color: var(--text) !important;
 }
 
 .markdown h4 {
-  font-size: 1.05rem !important;
+  font-size: 1.00rem !important;
   line-height: 1.4 !important;
-  margin-top: 0.95rem !important;
-  margin-bottom: 0.35rem !important;
+  margin-top: 0.9rem !important;
+  margin-bottom: 0.3rem !important;
+  color: var(--text) !important;
+}
+
+/* Inline Code Blocks */
+.markdown code {
+  font-family: var(--ifm-font-family-monospace) !important;
+  font-size: 0.85rem !important;
+  background-color: var(--surface-muted) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0.15rem 0.35rem !important;
 }
 
 /* Left Sidebar Styling - Clean Docusaurus Default Structure with Website Accent Tokens */
