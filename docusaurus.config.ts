@@ -63,7 +63,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Clumoove Docs',
+      title: 'Clumoove',
       logo: {
         alt: 'Clumoove Logo',
         src: 'img/clumoove_logo.svg',
