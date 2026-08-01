@@ -1,0 +1,109 @@
+/**
+ * Clumoove UI CSS Theme for Docusaurus
+ * Adopted directly from Clumoove SPA design system tokens (frontend/src/index.css)
+ */
+
+:root {
+  /* Clumoove Light Mode Design Tokens */
+  --ifm-font-family-base: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'Open Sans', monospace;
+
+  --ifm-color-primary: #18181b;
+  --ifm-color-primary-dark: #09090b;
+  --ifm-color-primary-darker: #000000;
+  --ifm-color-primary-darkest: #000000;
+  --ifm-color-primary-light: #27272a;
+  --ifm-color-primary-lighter: #3f3f46;
+  --ifm-color-primary-lightest: #52525b;
+
+  --ifm-background-color: #fafafa;
+  --ifm-background-surface-color: #ffffff;
+
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-border-color: #e4e4e7;
+
+  --ifm-footer-background-color: #18181b;
+  --ifm-footer-color: #fafafa;
+  --ifm-footer-link-color: #d4d4d8;
+
+  --ifm-toc-border-color: #e4e4e7;
+
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05);
+
+  --ifm-card-background-color: #ffffff;
+  --ifm-global-radius: 0.375rem;
+
+  --ifm-heading-color: #18181b;
+  --ifm-font-color-base: #18181b;
+  --ifm-link-color: #2563eb;
+  --ifm-link-hover-color: #1d4ed8;
+}
+
+/* Clumoove Dark Mode Design Tokens */
+[data-theme='dark'] {
+  --ifm-color-primary: #fafafa;
+  --ifm-color-primary-dark: #e4e4e7;
+  --ifm-color-primary-darker: #d4d4d8;
+  --ifm-color-primary-darkest: #a1a1aa;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+
+  --ifm-background-color: #18181b;
+  --ifm-background-surface-color: #27272a;
+
+  --ifm-navbar-background-color: #27272a;
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-border-color: #3f3f46;
+
+  --ifm-footer-background-color: #09090b;
+  --ifm-footer-color: #fafafa;
+  --ifm-footer-link-color: #a1a1aa;
+
+  --ifm-toc-border-color: #3f3f46;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+
+  --ifm-card-background-color: #27272a;
+
+  --ifm-heading-color: #fafafa;
+  --ifm-font-color-base: #fafafa;
+  --ifm-link-color: #93c5fd;
+  --ifm-link-hover-color: #60a5fa;
+}
+
+/* Custom UI Polish matching Clumoove SPA */
+.navbar {
+  border-bottom: 1px solid var(--ifm-navbar-border-color);
+}
+
+.footer {
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+.card {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 0.375rem;
+  box-shadow: none;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.card:hover {
+  border-color: var(--ifm-link-color);
+}
+
+.alert {
+  border-radius: 0.375rem;
+  border-width: 1px;
+}
+
+/* Sidebar styling */
+.menu__link--active {
+  font-weight: 600;
+}
+
+code {
+  border-radius: 0.25rem;
+}
