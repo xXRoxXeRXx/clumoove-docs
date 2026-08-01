@@ -278,6 +278,8 @@ h1, h2, h3, h4, h5, h6,
   top: 0 !important;
   z-index: 30 !important;
   height: 4.5rem !important;
+  min-height: 4.5rem !important;
+  max-height: 4.5rem !important;
   border-bottom: 1px solid var(--border) !important;
   background-color: var(--bg) !important;
   padding: 0 1rem !important;
@@ -293,37 +295,50 @@ h1, h2, h3, h4, h5, h6,
 .navbar__inner {
   max-width: 80rem !important;
   margin: 0 auto !important;
-  height: 4.5rem !important;
+  height: 100% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
 }
 
 .navbar__brand {
-  display: inline-flex !important;
+  height: 100% !important;
+  display: flex !important;
   align-items: center !important;
   gap: 0.5rem !important; /* gap-2 (8px) matching website */
   margin-right: 1.25rem !important;
+  padding: 0 !important;
   text-decoration: none !important;
 }
 
 .navbar__logo {
   height: 1.75rem !important; /* h-7 (28px) matching website */
   width: 1.75rem !important;  /* w-7 (28px) matching website */
-  margin-right: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  object-fit: contain !important;
 }
 
-.navbar__title {
+.navbar__title,
+.navbar__title b,
+.navbar__brand b {
+  display: inline-flex !important;
+  align-items: center !important;
   font-family: var(--ifm-heading-font-family) !important;
   font-weight: 700 !important; /* font-bold matching website */
   font-size: 1.125rem !important; /* text-lg (18px) matching website */
-  line-height: 1.25 !important;
+  line-height: 1 !important;
   letter-spacing: -0.015em !important;
   color: var(--text) !important;
   text-decoration: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .navbar__items {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
   gap: 1.25rem !important; /* gap-5 (20px) matching website */
 }
 
@@ -334,8 +349,12 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 500 !important;
   color: var(--text-secondary) !important;
   transition: color 150ms ease !important;
-  padding: 0.4rem 0.25rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
   text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 100% !important;
 }
 
 .navbar__link:hover,
