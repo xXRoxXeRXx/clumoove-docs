@@ -7,8 +7,8 @@ const config: Config = {
   tagline: 'Schritt-für-Schritt Anleitungen für Cloud-Migration, Synchronisation & Speicher-Anbieter',
   favicon: 'img/favicon.ico',
 
-  url: 'https://docs.clumoove.com',
-  baseUrl: '/',
+  url: 'https://clumoove.com',
+  baseUrl: '/docs/',
 
   organizationName: 'xXRoxXeRXx',
   projectName: 'clumoove-docs',
