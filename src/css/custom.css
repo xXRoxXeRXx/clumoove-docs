@@ -1,13 +1,59 @@
 /**
- * Clumoove UI CSS Theme for Docusaurus
- * Adopted directly from Clumoove SPA design system tokens (frontend/src/index.css)
+ * Clumoove Design System Integration for Docusaurus
+ * Adopted 1:1 from Clumoove SPA (frontend/src/index.css & public/fonts)
  */
 
+@import url('/fonts/fonts.css');
+
 :root {
-  /* Clumoove Light Mode Design Tokens */
+  /* Typography Tokens */
+  --ifm-heading-font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   --ifm-font-family-base: 'Open Sans', system-ui, -apple-system, sans-serif;
   --ifm-font-family-monospace: 'Open Sans', monospace;
 
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.375rem;
+  --radius-xl: 0.5rem;
+
+  /* Clumoove Light Mode Color Tokens */
+  --color-bg-primary: #fafafa;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #f4f4f5;
+  --color-bg-inverse: #18181b;
+
+  --color-text-primary: #18181b;
+  --color-text-secondary: #52525b;
+  --color-text-muted: #71717a;
+  --color-text-inverse: #ffffff;
+
+  --color-border: #e4e4e7;
+  --color-border-light: #f4f4f5;
+  --color-focus: #2563eb;
+  --color-hover: #f4f4f5;
+  --color-table-header: #f4f4f5;
+
+  --color-selection-bg: #d4d4d8;
+  --color-selection-text: #18181b;
+
+  /* Alert Tokens */
+  --color-error-bg: #fef2f2;
+  --color-error-border: #fecaca;
+  --color-error-text: #b91c1c;
+
+  --color-warning-bg: #fffbeb;
+  --color-warning-border: #fde68a;
+  --color-warning-text: #a16207;
+
+  --color-success-bg: #f0fdf4;
+  --color-success-border: #bbf7d0;
+  --color-success-text: #15803d;
+
+  --color-info-bg: #eff6ff;
+  --color-info-border: #bfdbfe;
+  --color-info-text: #1d4ed8;
+
+  /* Docusaurus Mapping - Light Mode */
   --ifm-color-primary: #18181b;
   --ifm-color-primary-dark: #09090b;
   --ifm-color-primary-darker: #000000;
@@ -16,77 +62,136 @@
   --ifm-color-primary-lighter: #3f3f46;
   --ifm-color-primary-lightest: #52525b;
 
-  --ifm-background-color: #fafafa;
-  --ifm-background-surface-color: #ffffff;
+  --ifm-background-color: var(--color-bg-primary);
+  --ifm-background-surface-color: var(--color-bg-secondary);
 
-  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-background-color: var(--color-bg-secondary);
   --ifm-navbar-shadow: none;
-  --ifm-navbar-border-color: #e4e4e7;
+  --ifm-navbar-border-color: var(--color-border);
 
-  --ifm-footer-background-color: #18181b;
-  --ifm-footer-color: #fafafa;
+  --ifm-footer-background-color: var(--color-bg-inverse);
+  --ifm-footer-color: var(--color-text-inverse);
   --ifm-footer-link-color: #d4d4d8;
 
-  --ifm-toc-border-color: #e4e4e7;
+  --ifm-toc-border-color: var(--color-border);
 
   --ifm-code-font-size: 90%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05);
 
-  --ifm-card-background-color: #ffffff;
-  --ifm-global-radius: 0.375rem;
+  --ifm-card-background-color: var(--color-bg-secondary);
+  --ifm-global-radius: var(--radius-lg);
 
-  --ifm-heading-color: #18181b;
-  --ifm-font-color-base: #18181b;
-  --ifm-link-color: #2563eb;
+  --ifm-heading-color: var(--color-text-primary);
+  --ifm-font-color-base: var(--color-text-primary);
+  --ifm-link-color: var(--color-focus);
   --ifm-link-hover-color: #1d4ed8;
+
+  --ifm-hr-border-color: var(--color-border);
 }
 
-/* Clumoove Dark Mode Design Tokens */
+/* Clumoove Dark Mode Color Tokens */
 [data-theme='dark'] {
+  --color-bg-primary: #18181b;
+  --color-bg-secondary: #27272a;
+  --color-bg-tertiary: #3f3f46;
+  --color-bg-inverse: #09090b;
+
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #d4d4d8;
+  --color-text-muted: #a1a1aa;
+  --color-text-inverse: #ffffff;
+
+  --color-border: #3f3f46;
+  --color-border-light: #27272a;
+  --color-focus: #93c5fd;
+  --color-hover: #3f3f46;
+  --color-table-header: #3f3f46;
+
+  --color-selection-bg: #3f3f46;
+  --color-selection-text: #fafafa;
+
+  /* Alert Tokens */
+  --color-error-bg: #450a0a;
+  --color-error-border: #f87171;
+  --color-error-text: #fecaca;
+
+  --color-warning-bg: #451a03;
+  --color-warning-border: #fbbf24;
+  --color-warning-text: #fef08a;
+
+  --color-success-bg: #052e16;
+  --color-success-border: #4ade80;
+  --color-success-text: #bbf7d0;
+
+  --color-info-bg: #172554;
+  --color-info-border: #60a5fa;
+  --color-info-text: #bfdbfe;
+
+  /* Docusaurus Mapping - Dark Mode */
   --ifm-color-primary: #fafafa;
   --ifm-color-primary-dark: #e4e4e7;
   --ifm-color-primary-darker: #d4d4d8;
   --ifm-color-primary-darkest: #a1a1aa;
-  --ifm-color-primary-light: #ffffff;
-  --ifm-color-primary-lighter: #ffffff;
-  --ifm-color-primary-lightest: #ffffff;
 
-  --ifm-background-color: #18181b;
-  --ifm-background-surface-color: #27272a;
+  --ifm-background-color: var(--color-bg-primary);
+  --ifm-background-surface-color: var(--color-bg-secondary);
 
-  --ifm-navbar-background-color: #27272a;
+  --ifm-navbar-background-color: var(--color-bg-secondary);
   --ifm-navbar-shadow: none;
-  --ifm-navbar-border-color: #3f3f46;
+  --ifm-navbar-border-color: var(--color-border);
 
-  --ifm-footer-background-color: #09090b;
-  --ifm-footer-color: #fafafa;
+  --ifm-footer-background-color: var(--color-bg-inverse);
+  --ifm-footer-color: var(--color-text-inverse);
   --ifm-footer-link-color: #a1a1aa;
 
-  --ifm-toc-border-color: #3f3f46;
+  --ifm-toc-border-color: var(--color-border);
 
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
 
-  --ifm-card-background-color: #27272a;
+  --ifm-card-background-color: var(--color-bg-secondary);
 
-  --ifm-heading-color: #fafafa;
-  --ifm-font-color-base: #fafafa;
-  --ifm-link-color: #93c5fd;
+  --ifm-heading-color: var(--color-text-primary);
+  --ifm-font-color-base: var(--color-text-primary);
+  --ifm-link-color: var(--color-focus);
   --ifm-link-hover-color: #60a5fa;
+
+  --ifm-hr-border-color: var(--color-border);
 }
 
-/* Custom UI Polish matching Clumoove SPA */
+/* Base Body Styling */
+body {
+  font-family: var(--ifm-font-family-base);
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Header & Navbar */
 .navbar {
   border-bottom: 1px solid var(--ifm-navbar-border-color);
 }
 
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+}
+
+/* Footer */
 .footer {
   border-top: 1px solid var(--ifm-toc-border-color);
 }
 
+/* Cards */
 .card {
   border: 1px solid var(--ifm-toc-border-color);
-  border-radius: 0.375rem;
+  border-radius: var(--radius-lg);
   box-shadow: none;
+  background-color: var(--ifm-card-background-color);
   transition: border-color 0.15s ease-in-out;
 }
 
@@ -94,16 +199,68 @@
   border-color: var(--ifm-link-color);
 }
 
-.alert {
-  border-radius: 0.375rem;
-  border-width: 1px;
+/* Markdown Tables */
+.markdown table {
+  border: 1px solid var(--color-border);
+  border-collapse: collapse;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  width: 100%;
 }
 
-/* Sidebar styling */
-.menu__link--active {
+.markdown table th {
+  background-color: var(--color-table-header);
+  border: 1px solid var(--color-border);
+  font-family: var(--ifm-heading-font-family);
   font-weight: 600;
+
 }
 
-code {
-  border-radius: 0.25rem;
+.markdown table td {
+  border: 1px solid var(--color-border);
+}
+
+/* Docusaurus Admonitions (Alert Banners) Styled matching Clumoove UI */
+.alert {
+  border-radius: var(--radius-md);
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: none;
+}
+
+.alert--info,
+.alert--secondary {
+  background-color: var(--color-info-bg);
+  border-color: var(--color-info-border);
+  color: var(--color-info-text);
+}
+
+.alert--success,
+.alert--tip {
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success-border);
+  color: var(--color-success-text);
+}
+
+.alert--warning {
+  background-color: var(--color-warning-bg);
+  border-color: var(--color-warning-border);
+  color: var(--color-warning-text);
+}
+
+.alert--danger {
+  background-color: var(--color-error-bg);
+  border-color: var(--color-error-border);
+  color: var(--color-error-text);
+}
+
+/* Focus Outlines & Text Selection */
+:where(button, a[href], input, select, textarea, [role="button"]):focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--color-selection-bg);
+  color: var(--color-selection-text);
 }

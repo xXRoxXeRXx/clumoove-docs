@@ -99,7 +99,7 @@ const config: Config = {
           items: [
             {
               label: 'Erste Schritte',
-              to: '/getting-started',
+              to: '/',
             },
             {
               label: 'Speicher-Anbieter',
