@@ -38,9 +38,20 @@ Falls du beim Aufrufen von Entra ID mit einem privaten Microsoft-Konto (`@outloo
 
 ### Schritt 3: API-Berechtigungen (Scopes) konfigurieren
 Unter **API-Berechtigungen** müssen folgende delegierte Berechtigungen aktiviert sein:
+- `openid` (Anmeldung)
+- `profile` (Basisprofil)
 - `Files.ReadWrite` (Dateien lesen und schreiben)
 - `offline_access` (Refresh-Tokens für automatische Token-Rotation)
 - `User.Read` (Profilinformationen lesen)
+
+### Fehlerbehebung: `unauthorized_client`
+
+Die Meldung *"The client does not exist or is not enabled for consumers"* bedeutet, dass die registrierte Anwendung nicht für persönliche Microsoft-Konten freigegeben ist. Clumoove verwendet absichtlich die Microsoft-Authority `consumers` und kann keine reinen Unternehmens- oder Schulkonto-Registrierungen verwenden.
+
+1. Öffne in der App-Registrierung **Authentication** und prüfe unter **Supported account types**, dass **Personal Microsoft accounts only** oder **Accounts in any organizational directory and personal Microsoft accounts** ausgewählt ist.
+2. Prüfe unter **Authentication > Web**, dass die Weiterleitungs-URI exakt der von Clumoove verwendeten URL entspricht, einschließlich Protokoll, Domain, Port und Pfad. Lokal ist das üblicherweise `http://localhost:8001/api/oauth/callback`; in der Produktion z. B. `https://deine-domain.example/api/oauth/callback`.
+3. Verwende für `ONEDRIVE_CLIENT_ID` die **Application (client) ID** aus der Übersichtsseite der App-Registrierung, nicht die Object ID. Für `ONEDRIVE_CLIENT_SECRET` wird der beim Erstellen angezeigte Secret-**Wert** benötigt, nicht dessen Secret ID.
+4. Starte den API-Container bzw. -Prozess nach Änderungen an den Umgebungsvariablen neu.
 
 ### Schritt 4: Umgebungsvariablen in Clumoove eintragen
 

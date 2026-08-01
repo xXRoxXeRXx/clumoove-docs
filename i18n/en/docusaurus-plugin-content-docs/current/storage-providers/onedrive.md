@@ -36,9 +36,20 @@ If you sign in to Entra ID with a personal Microsoft account (`@outlook.com`, `@
 
 ### Step 3: API Permissions (Scopes)
 Under **API permissions**, enable delegated scopes:
+- `openid` (sign-in)
+- `profile` (basic profile)
 - `Files.ReadWrite`
 - `offline_access`
 - `User.Read`
+
+### Troubleshooting: `unauthorized_client`
+
+The message *"The client does not exist or is not enabled for consumers"* means that the registered application is not enabled for personal Microsoft accounts. Clumoove intentionally uses Microsoft's `consumers` authority and cannot use registrations restricted to work or school accounts.
+
+1. Open **Authentication** in the app registration and check **Supported account types**. Select **Personal Microsoft accounts only** or **Accounts in any organizational directory and personal Microsoft accounts**.
+2. Under **Authentication > Web**, verify that the redirect URI exactly matches the URI used by Clumoove, including scheme, domain, port, and path. This is typically `http://localhost:8001/api/oauth/callback` locally and, for example, `https://your-domain.example/api/oauth/callback` in production.
+3. Set `ONEDRIVE_CLIENT_ID` to the **Application (client) ID** from the app registration overview, not the Object ID. Set `ONEDRIVE_CLIENT_SECRET` to the secret **Value** shown when it was created, not the secret ID.
+4. Restart the API container or process after changing environment variables.
 
 ### Step 4: Environment Variables
 
