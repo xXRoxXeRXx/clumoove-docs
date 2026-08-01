@@ -171,9 +171,21 @@ body {
   line-height: 1.65;
 }
 
-/* Content Area Markdown Text & Colors */
+/* Content Area Markdown Text & Colors matching Website 1:1 */
 .markdown p,
-.markdown li,
+.markdown li {
+  font-family: var(--ifm-font-family-base) !important;
+  font-size: 1rem !important;
+  line-height: 1.8 !important; /* leading-8 style line height */
+  color: var(--text-secondary) !important; /* text-[var(--text-secondary)] (#52525b / #d4d4d8) */
+}
+
+.markdown strong,
+.markdown b {
+  color: var(--text) !important;
+  font-weight: 600 !important;
+}
+
 .markdown td,
 .markdown th,
 .markdown blockquote {
