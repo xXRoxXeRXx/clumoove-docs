@@ -74,10 +74,10 @@
   --ifm-background-color: var(--bg);
   --ifm-background-surface-color: var(--surface);
 
-  --ifm-navbar-background-color: var(--bg);
+  --ifm-navbar-background-color: var(--surface);
   --ifm-navbar-shadow: none;
   --ifm-navbar-border-color: var(--border);
-  --ifm-navbar-height: 4.5rem;
+  --ifm-navbar-height: 4rem;
 
   --ifm-footer-background-color: var(--action);
   --ifm-footer-color: var(--action-text);
@@ -141,7 +141,7 @@
   --ifm-background-color: var(--bg);
   --ifm-background-surface-color: var(--surface);
 
-  --ifm-navbar-background-color: var(--bg);
+  --ifm-navbar-background-color: var(--surface);
   --ifm-navbar-shadow: none;
   --ifm-navbar-border-color: var(--border);
 
@@ -277,11 +277,11 @@ h1, h2, h3, h4, h5, h6,
   position: sticky !important;
   top: 0 !important;
   z-index: 30 !important;
-  height: 4.5rem !important;
-  min-height: 4.5rem !important;
-  max-height: 4.5rem !important;
+  height: 4rem !important;
+  min-height: 4rem !important;
+  max-height: 4rem !important;
   border-bottom: 1px solid var(--border) !important;
-  background-color: var(--bg) !important;
+  background-color: var(--surface) !important;
   padding: 0 1rem !important;
   box-shadow: none !important;
 }
@@ -305,15 +305,15 @@ h1, h2, h3, h4, h5, h6,
   height: 100% !important;
   display: flex !important;
   align-items: center !important;
-  gap: 0.5rem !important; /* gap-2 (8px) matching website */
+  gap: 0.5rem !important; /* gap-2 (8px) matching app */
   margin-right: 1.25rem !important;
   padding: 0 !important;
   text-decoration: none !important;
 }
 
 .navbar__logo {
-  height: 1.75rem !important; /* h-7 (28px) matching website */
-  width: 1.75rem !important;  /* w-7 (28px) matching website */
+  height: 2rem !important; /* h-8 (32px) matching app */
+  width: 2rem !important;  /* w-8 (32px) matching app */
   margin: 0 !important;
   display: block !important;
   object-fit: contain !important;
@@ -324,11 +324,11 @@ h1, h2, h3, h4, h5, h6,
 .navbar__brand b {
   display: inline-flex !important;
   align-items: center !important;
-  font-family: var(--ifm-heading-font-family) !important;
-  font-weight: 700 !important; /* font-bold matching website */
-  font-size: 1.125rem !important; /* text-lg (18px) matching website */
+  font-family: var(--ifm-font-family-base) !important;
+  font-weight: 600 !important; /* font-semibold matching app */
+  font-size: 1.125rem !important; /* text-lg (18px) matching app */
   line-height: 1 !important;
-  letter-spacing: -0.015em !important;
+  letter-spacing: -0.025em !important; /* tracking-tight matching app */
   color: var(--text) !important;
   text-decoration: none !important;
   margin: 0 !important;
