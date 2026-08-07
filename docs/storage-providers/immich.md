@@ -6,10 +6,10 @@ sidebar_position: 9
 
 # Immich Foto- & Videospeicher
 
-[Immich](https://immich.app/) ist eine selbstgehostete Lösung für Fotos und Videos. Clumoove ermöglicht es, Medien direkt aus deiner Immich-Zeitleiste oder spezifischen Alben zu migrieren oder abzusichern.
+[Immich](https://immich.app/) ist eine selbstgehostete Lösung für Fotos und Videos. Clumoove ermöglicht es, Medien direkt aus deiner Immich-Bibliothek zu migrieren oder abzusichern.
 
-:::info Virtueller Provider
-Immich nutzt eine virtuelle Ordnerstruktur (`/Timeline` und `/Albums`). Immich-Ziele erlauben **kein direktes Überschreiben, Atomares Umbenennen oder Löschen**, da Immich eigene Duplikatprüfungen durchführt. Es wird nativ die `SKIP`-Strategie angewendet.
+:::info Bibliotheksbasierter Virtueller Provider
+Immich wird als flache Medien-Bibliothek (`/` Stammverzeichnis) ohne klassische Ordner-Hierarchie angebunden. Immich-Ziele erlauben **kein direktes Überschreiben, Atomares Umbenennen oder Ordner-Löschungen**, da Immich hochgeladene Assets anhand ihrer Prüfsumme indiziert. Nativ wird bei vorhandenen Bildern/Videos die `SKIP`-Duplikatprüfungsstrategie angewendet.
 :::
 
 ## 1. API-Schlüssel in Immich erstellen

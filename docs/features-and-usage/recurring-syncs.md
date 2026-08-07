@@ -21,3 +21,15 @@ Du kannst pro Sync-Job ein **Live-Bandbreitenlimit** (0 bis 1000 Mbps) festlegen
 ## Überlappungsschutz
 
 Der Clumoove-Scheduler verhindert automatisch das doppelte Ausführen eines Jobs: Wenn ein 90-Minuten-Sync nach 60 Minuten noch läuft, wird der nächste Durchlauf übersprungen und die nächste Ausführungszeit berechnet.
+
+---
+
+## Bestehende Sync-Jobs bearbeiten
+
+Bereits angelegte Sync-Jobs müssen nicht gelöscht und neu erstellt werden, wenn sich Anforderungen ändern. Klicke im **Sync Dashboard** bei einem Job auf **Bearbeiten** (Stift-Symbol), um das Bearbeitungs-Modal zu öffnen:
+
+- **Quell-Pfade anpassen**: Wähle über den integrierten Dateibrowser zusätzliche Ordner/Dateien aus oder hebe die Auswahl auf.
+- **Zielverzeichnis ändern**: Öffne den Ziel-Browser und passe den Ziel-Ordner an.
+- **Modus & Optionen**: Wechsle flexibel zwischen Ein-Wege- (`one_way`) und Zwei-Wege-Sync (`two_way`), aktiviere/deaktiviere die Löschweitergabe oder ändere die Konfliktstrategie (`SKIP`, `OVERWRITE`, `RENAME`).
+- **Intervall & Bandbreite**: Passe das Zeit-Intervall (in Minuten) sowie das Live-Bandbreitenlimit an.
+

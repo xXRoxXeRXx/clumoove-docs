@@ -22,4 +22,5 @@ Clumoove supports a wide variety of cloud storages, protocols, and local network
 | **Immich** | Photos / Media | ❌ (API Key) | ✅ (Photos/Videos) | ❌ | ❌ | ❌ (Virtual) |
 | **WebDAV** | Standard Protocol | ❌ (Basic Auth) | ✅ | ❌ | ❌ | ✅ |
 | **SMB / SFTP** | Network Share | ❌ (SSH/SMB Auth) | ✅ | ❌ | ❌ | ✅ |
+| **FTPS / FTP** | Network Share | ❌ (FTP/TLS Auth) | ✅ | ❌ | ❌ | ✅ |
 | **Local Storage** | Local Path | ❌ | ✅ | ❌ | ❌ | ✅ |

@@ -22,6 +22,7 @@ Clumoove unterstützt eine Vielzahl von Cloud-Speichern, Protokollen und lokalen
 | **Immich** | Fotos / Medien | ❌ (API Key) | ✅ (Bilder/Videos) | ❌ | ❌ | ❌ (Virtuell) |
 | **WebDAV** | Standard-Protokoll | ❌ (Basic Auth) | ✅ | ❌ | ❌ | ✅ |
 | **SMB / SFTP** | Netzwerk-Speicher | ❌ (SSH/SMB Auth) | ✅ | ❌ | ❌ | ✅ |
+| **FTPS / FTP** | Netzwerk-Speicher | ❌ (FTP/TLS Auth) | ✅ | ❌ | ❌ | ✅ |
 | **Local Storage** | Lokaler Pfad | ❌ | ✅ | ❌ | ❌ | ✅ |
 
 ---

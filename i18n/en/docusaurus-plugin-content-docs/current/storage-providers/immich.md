@@ -8,8 +8,8 @@ sidebar_position: 9
 
 [Immich](https://immich.app/) is a self-hosted photo/video management platform.
 
-:::info Virtual Provider
-Immich uses virtual directory structures (`/Timeline` and `/Albums`). Overwrite, atomic rename, and deletion are unsupported; native duplicate `SKIP` is enforced.
+:::info Library-Based Virtual Provider
+Immich connects as a flat media library (`/` root directory) without traditional directory hierarchies. Overwrite, atomic rename, and directory deletion are unsupported; native checksum-based duplicate `SKIP` is enforced.
 :::
 
 ## 1. Create API Key

@@ -28,6 +28,7 @@ const sidebars: SidebarsConfig = {
         'storage-providers/s3',
         'storage-providers/immich',
         'storage-providers/smb-sftp',
+        'storage-providers/ftp',
         'storage-providers/local-storage',
       ],
     },
@@ -40,6 +41,7 @@ const sidebars: SidebarsConfig = {
         'features-and-usage/conflict-strategies',
         'features-and-usage/recurring-syncs',
         'features-and-usage/verification',
+        'features-and-usage/notifications',
       ],
     },
     {
